@@ -1,0 +1,553 @@
+/* Reset e estilos globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Fundo com imagem escurecida */
+.background {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.3);
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Barra de navegação fixa */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #1e90ff;
+}
+
+/* Conteúdo principal */
+.content {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-top: 70px;
+}
+
+.intro h1 {
+    font-size: 3em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.intro h2 {
+    font-size: 2.5em;
+    margin-top: 10px;
+}
+
+.intro h2 span {
+    color: #1e90ff;
+}
+
+.intro p {
+    font-size: 1.2em;
+    margin: 10px 0 20px;
+}
+
+.btn {
+    background: #1e90ff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #0d6efd;
+}
+
+/* Ícones sociais */
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a img {
+    width: 32px;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a img:hover {
+    transform: scale(1.2);
+}
+
+/* Seção Sobre Mim */
+.sobre-mim {
+    text-align: center;
+    padding: 50px 10%;
+    background-color: #fff;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+.sobre-mim .container {
+    display: block;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.sobre-mim h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.sobre-mim p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Seção Perfil e Skills */
+.perfil-skills {
+    background: #fff;
+    padding: 50px 0;
+}
+
+.perfil-skills .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.perfil, .skills {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #222;
+}
+
+p {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Estilo das barras de progresso */
+.barra {
+    background: #ccc;
+    height: 8px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.progresso {
+    background: #000;
+    height: 100%;
+}
+
+.nivel {
+    position: absolute;
+    top: -25px;
+    right: 0;
+    background: black;
+    color: white;
+    padding: 3px 8px;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .intro h1 {
+        font-size: 2.5em;
+    }
+
+    .intro h2 {
+        font-size: 2em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .perfil-skills .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .perfil, .skills {
+        width: 100%;
+    }
+}
+.intro h2, .intro p {
+    color: white;
+}
+.btn {
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.btn:hover {
+    background-color: #444;
+}
+.sobre-mim h2, .perfil h2 {
+    font-size: 28px; /* Defina um tamanho único para ambas as seções */
+    font-weight: bold;
+}
+
+.sobre-mim p, .perfil p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+/* Seção Resumo */
+#resumo {
+    background-color: #fff;
+    padding: 50px 10%;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+#resumo .resumo-container {
+    display: block;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#resumo h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#resumo .bloco {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#resumo .bloco h3 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+#resumo .bloco p {
+    font-size: 16px;
+    color: #333;
+}
+.btn-certificado {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 8px 15px;
+    font-size: 1em;
+    border: none;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-certificado:hover {
+    background-color: black;
+}
+.curso-item {
+    margin-bottom: 20px;
+}
+
+.curso-item h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.curso-item p {
+    font-size: 16px;
+    color: #555;
+}
+
+.btn-certificado {
+    display: block;
+    background-color: black;
+    color: white;
+    padding: 8px 15px;
+    font-size: 1em;
+    border: none;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.btn-certificado:hover {
+    background-color: black;
+}
+/* Fundo branco e fonte preta */
+#portfolio {
+    background-color: white;
+    color: black;
+    font-family: Arial, sans-serif;
+}
+
+/* Seção do portfólio */
+#portfolio {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+#portfolio h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+#portfolio p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #333;
+}
+
+/* Grid dos projetos */
+.portfolio-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Cada projeto */
+.project {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* Imagem do projeto */
+.project img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.3s ease-in-out;
+}
+
+/* Sobreposição ao passar o mouse */
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8); /* Fundo branco translúcido */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.project-overlay h3 {
+    color: #333;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Efeito ao passar o mouse */
+.project:hover .project-overlay {
+    opacity: 1;
+}
+
+.project:hover img {
+    filter: blur(3px);
+}
+.bloco {
+    text-align: center;
+    padding: 50px 10%;
+    background-color: #fff;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+.bloco h2 {
+    font-size: 28px; /* Mesmo tamanho do h2 da seção Sobre Mim */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.bloco p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #333;
+}
+/* Unificando estilos de texto */
+.sobre-mim p, .perfil p, #resumo .bloco p, #portfolio p, .project-overlay h3 {
+    font-size: 18px; /* Tamanho igual ao da seção Sobre Mim */
+    line-height: 1.8; /* Espaçamento entre linhas igual */
+    color: #333 !important; /* Cor idêntica à seção Sobre Mim */
+    font-family: 'Arial', sans-serif; /* Garantir mesma fonte */
+    font-weight: normal; /* Caso outra regra esteja forçando bold */
+}
+#contato {
+    text-align: center;
+    background-color: #ffffff; /* Fundo branco */
+    padding: 50px 20px;
+
+}
+
+#contato h2 {
+    font-size: 24px; /* Mesmo tamanho dos títulos das outras seções */
+    color: #333; /* Mesma cor do restante do site */
+    font-family: 'Poppins', sans-serif; /* Garante a mesma fonte */
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+#contato p {
+    font-size: 18px; /* Mesmo tamanho do texto das outras seções */
+    color: #333; /* Cor igual à usada no site */
+    font-family: 'Poppins', sans-serif;
+    max-width: 600px;
+    margin: 0 auto 20px;
+}
+
+.contato-info p {
+    font-size: 18px;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contato-info a {
+    color: #0077b5; /* Azul padrão do LinkedIn */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contato-info a:hover {
+    text-decoration: underline;
+}
+#portfolio, #contato {
+    background-color: #ffffff;/* Garante que ambas as seções tenham fundo branco */
+}
+
+#portfolio {
+    padding-bottom: 0; /* Remove qualquer espaçamento extra no final */
+}
+
+#contato {
+    padding-top: 0; /* Remove qualquer espaçamento extra no início */
+}
+#portfolio, #contato {
+    background-color: #ffffff !important; /* Força o fundo branco */
+    background-image: none !important; /* Remove qualquer imagem de fundo */
+}
+
+body {
+    background-color: #ffffff; /* Garante que o fundo geral seja branco */
+}
+section {
+    background: white;
+    position: relative;
+    z-index: 1;
+}
+body {
+    background: white;
+    position: relative;
+}
+
+#contato {
+    background: white; /* Garante que o fundo seja branco */
+    position: relative; /* Garante que a seção sobreponha a imagem */
+    z-index: 1; /* Certifica-se de que o fundo branco aparece por cima */
+}
+section {
+    background: white;
+}
+/* Estilo para a imagem de perfil */
+.sobre-mim img {
+width: 150px; /* Tamanho da imagem */
+height: 150px; /* Tamanho da imagem */
+border-radius: 50%; /* Torna a imagem redonda */
+object-fit: cover; /* Garante que a imagem ocupe toda a área do círculo */
+margin-bottom: 20px;
+}
+
+
+
